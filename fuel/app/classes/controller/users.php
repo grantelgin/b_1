@@ -24,6 +24,7 @@ class Controller_Users extends Controller_Template{
 
 	}
 
+/*
 	public function action_create()
 	{
 		if (Input::method() == 'POST')
@@ -74,6 +75,82 @@ class Controller_Users extends Controller_Template{
 
 		$this->template->title = "Users";
 		$this->template->content = View::forge('users/create');
+
+	}
+*/
+	
+	public function action_createAccount()
+	{
+		if (Input::method() == 'POST')
+		{
+			$val = Model_User::validateAccount('createAccount');
+			
+			if ($val->run())
+			{
+				$user = Model_User::forge(array(
+					'token' => Input::post('token'),
+					'password' => Input::post('password'),
+					'email' => Input::post('email'),
+					'first_name' => Input::post('first_name'),
+					'last_name' => Input::post('last_name'),
+				));
+
+				if ($user and $user->save())
+				{
+					Session::set_flash('success', 'Added user #'.$user->id.'.');
+
+					Response::redirect('users/createHome');
+				}
+
+				else
+				{
+					Session::set_flash('error', 'Could not save user.');
+				}
+			}
+			else
+			{
+				Session::set_flash('error', $val->error());
+			}
+		}
+
+		$this->template->title = "Users";
+		$this->template->content = View::forge('users/createAccount');
+
+	}
+	public function action_createHome()
+	{
+		if (Input::method() == 'POST')
+		{
+			$val = Model_User::validateHome('createHome');
+			
+			if ($val->run())
+			{
+				$user = Model_User::forge(array(
+					'home_city' => Input::post('home_city'),
+					'home_st' => Input::post('home_st'),
+					'homecity_id' => Input::post('homecity_id'),
+				));
+
+				if ($user and $user->save())
+				{
+					Session::set_flash('success', 'Added user #'.$user->id.'.');
+
+					Response::redirect('users');
+				}
+
+				else
+				{
+					Session::set_flash('error', 'Could not save user.');
+				}
+			}
+			else
+			{
+				Session::set_flash('error', $val->error());
+			}
+		}
+
+		$this->template->title = "Users";
+		$this->template->content = View::forge('users/createHome');
 
 	}
 

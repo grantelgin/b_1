@@ -11,4 +11,5 @@ return array(
 			'password'   => 'root',
 		),
 	),
+	'profiling'  => true,
 );

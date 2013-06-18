@@ -62,6 +62,6 @@
 <p>No Users.</p>
 
 <?php endif; ?><p>
-	<?php echo Html::anchor('users/create', 'Add new User', array('class' => 'btn btn-success')); ?>
+	<?php echo Html::anchor('users/createAccount', 'Add new User', array('class' => 'btn btn-success')); ?>
 
 </p>
