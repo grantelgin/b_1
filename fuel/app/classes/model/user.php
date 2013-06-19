@@ -39,33 +39,33 @@ class Model_User extends Model
 		),
 	);
 
-	/*
+	
 public static function validate($factory)
 	{
 		$val = Validation::forge($factory);
 		$val->add_field('token', 'Token', 'max_length[255]');
-		$val->add_field('password', 'Password', 'required|max_length[255]');
+		$val->add_field('password', 'Password', 'required|min_length[4]|max_length[255]');
 		$val->add_field('email', 'Email', 'required|valid_email|max_length[255]');
 		$val->add_field('home_city', 'Home City', 'required|max_length[255]');
 		$val->add_field('home_st', 'Home St', 'required|max_length[255]');
-		$val->add_field('homecity_id', 'Homecity Id', 'required|valid_string[numeric]');
-		$val->add_field('work_city', 'Work City', 'required|max_length[255]');
-		$val->add_field('work_st', 'Work St', 'required|max_length[255]');
-		$val->add_field('workcity_id', 'Workcity Id', 'required|valid_string[numeric]');
-		$val->add_field('ownshome', 'Ownshome', 'required');
-		$val->add_field('hasdriverslic', 'Hasdriverslic', 'required');
-		$val->add_field('hasautomobile', 'Hasautomobile', 'required');
-		$val->add_field('garage_city', 'Garage City', 'required|max_length[255]');
-		$val->add_field('garage_st', 'Garage St', 'required|max_length[255]');
-		$val->add_field('garagecity_id', 'Garagecity Id', 'required|valid_string[numeric]');
-		$val->add_field('hasbiz', 'Hasbiz', 'required');
-		$val->add_field('hasbizlic', 'Hasbizlic', 'required');
-		$val->add_field('first_name', 'First Name', 'required|max_length[255]');
-		$val->add_field('last_name', 'Last Name', 'required|max_length[255]');
+		$val->add_field('homecity_id', 'Homecity Id', 'valid_string[numeric]');
+		$val->add_field('work_city', 'Work City', 'max_length[255]');
+		$val->add_field('work_st', 'Work St', 'max_length[255]');
+		$val->add_field('workcity_id', 'Workcity Id', 'valid_string[numeric]');
+		$val->add_field('ownshome', 'Ownshome', 'valid_string[numeric]');
+		$val->add_field('hasdriverslic', 'Hasdriverslic', 'valid_string[numeric]');
+		$val->add_field('hasautomobile', 'Hasautomobile', 'valid_string[numeric]');
+		$val->add_field('garage_city', 'Garage City', 'max_length[255]');
+		$val->add_field('garage_st', 'Garage St', 'max_length[255]');
+		$val->add_field('garagecity_id', 'Garagecity Id', 'valid_string[numeric]');
+		$val->add_field('hasbiz', 'Hasbiz', 'valid_string[numeric]');
+		$val->add_field('hasbizlic', 'Hasbizlic', 'valid_string[numeric]');
+		$val->add_field('first_name', 'First Name', 'max_length[255]');
+		$val->add_field('last_name', 'Last Name', 'max_length[255]');
 
 		return $val;
 	}
-*/
+
 	public static function validateAccount($factory)
 	{
 		$val = Validation::forge($factory);
