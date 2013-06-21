@@ -2,3 +2,7 @@
 composer.json
 composer.phar
 /docs
+
+fuel/app/config/simpleauth.php
+
+fuel/app/config/auth.php
