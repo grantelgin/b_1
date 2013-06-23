@@ -18,6 +18,14 @@
 			</div>
 		</div>
 		<div class="control-group">
+			<?php echo Form::label('Home zip', 'home_zip', array('class'=>'control-label')); ?>
+
+			<div class="controls">
+				<?php echo Form::input('home_zip', Input::post('home_zip', isset($user) ? $user->home_zip : ''), array('class' => 'span4', 'placeholder'=>'Home zip')); ?>
+
+			</div>
+		</div>
+		<div class="control-group">
 			<?php echo Form::label('Homecity id', 'homecity_id', array('class'=>'control-label')); ?>
 
 			<div class="controls">

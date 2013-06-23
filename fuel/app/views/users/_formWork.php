@@ -25,7 +25,14 @@
 
 			</div>
 		</div>
+<div class="control-group">
+			<?php echo Form::label('Work zip', 'work_zip', array('class'=>'control-label')); ?>
 
+			<div class="controls">
+				<?php echo Form::input('work_zip', Input::post('work_zip', isset($user) ? $user->work_zip : ''), array('class' => 'span4', 'placeholder'=>'Work zip')); ?>
+
+			</div>
+		</div>
 				<div class="control-group">
 			<label class='control-label'>&nbsp;</label>
 			<div class='controls'>

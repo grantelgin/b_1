@@ -1,7 +1,7 @@
 <?php
 use Orm\Model;
 
-class Model_User extends Model
+class Model_User extends Orm\Model
 {
 	protected static $_properties = array(
 		'id',
@@ -10,9 +10,11 @@ class Model_User extends Model
 		'email',
 		'home_city',
 		'home_st',
+		'home_zip',
 		'homecity_id',
 		'work_city',
 		'work_st',
+		'work_zip',
 		'workcity_id',
 		'ownshome',
 		'hasdriverslic',
@@ -27,7 +29,9 @@ class Model_User extends Model
 		'created_at',
 		'updated_at',
 	);
-
+	
+	protected static $_has_many = array('cities');
+	
 	protected static $_observers = array(
 		'Orm\Observer_CreatedAt' => array(
 			'events' => array('before_insert'),
@@ -80,19 +84,15 @@ public static function validate($factory)
 	public static function validateHome($factory)
 	{
 		$val = Validation::forge($factory);
-		$val->add_field('home_city', 'Home City', 'required|max_length[255]');
-		$val->add_field('home_st', 'Home St', 'required|max_length[255]');
-		$val->add_field('homecity_id', 'Homecity Id', 'required|valid_string[numeric]');		
-		
+		$val->add_field('home_zip', 'Home Zip', 'required|max_length[5]');
+			
 		return $val;
 	}
 	public static function validateWork($factory)
 	{
 		$val = Validation::forge($factory);
-		$val->add_field('work_city', 'Work City', 'required|max_length[255]');
-		$val->add_field('work_st', 'Work St', 'required|max_length[255]');
-		$val->add_field('workcity_id', 'Workcity Id', 'required|valid_string[numeric]');		
-		
+		$val->add_field('work_zip', 'Work Zip', 'required|max_length[5]');
+				
 		return $val;
 	}
 	public static function validateOwner($factory)
