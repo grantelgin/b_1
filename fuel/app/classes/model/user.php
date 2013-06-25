@@ -31,6 +31,8 @@ class Model_User extends Orm\Model
 	);
 	
 	protected static $_has_many = array('cities');
+	protected static $_has_many = array('regulators');
+	protected static $_has_many = array('complianceitems');
 	
 	protected static $_observers = array(
 		'Orm\Observer_CreatedAt' => array(
