@@ -5,7 +5,7 @@ class Model_City extends Orm\Model
 {
 	protected static $_properties = array(
 		'id',
-		'zipcode',
+		'zipCode',
 		'state',
 		'city',
 		'county',
@@ -29,7 +29,7 @@ class Model_City extends Orm\Model
 	public static function validate($factory)
 	{
 		$val = Validation::forge($factory);
-		$val->add_field('zipcode', 'Zipcode', 'required|max_length[255]');
+		$val->add_field('zipCode', 'Zipcode', 'required|max_length[255]');
 		$val->add_field('state', 'State', 'required|max_length[255]');
 		$val->add_field('city', 'City', 'required|max_length[255]');
 		$val->add_field('county', 'County', 'required|max_length[255]');

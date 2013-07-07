@@ -11,23 +11,19 @@ class Controller_Regulators extends Controller_Template{
 	
 	public function action_indexUser($userId)
 	{
-	/*
-$data['regulators'] = Model_Regulator::find('all', array(
-                        'where' => array(
-                            'city_id' => $user->
-                        )
-                    ));
-*/
-	$currentUser = Model_User::find('first', array('where' => array('id' => $userId)));
-	$data['regulators'] = Model_Map_RegulatorsCity::find('all', array('where' => array('city_id' => $currentUser->homecity_id)));
-	foreach ($data['regulators'] as $regBro) {
-		$regCo = Model_Regulator::find('first', array('where' => array('id' => $regBro->id)));
-		Debug::dump($userId, $currentUser->homecity_id, $data['regulators'], $regBro, $regCo);
+
+		$currentUser = Model_User::find('first', array('where' => array('id' => $userId)));
+		$data['regulators'] = Model_Map_RegulatorsCity::find('all', array('where' => array('city_id' => $currentUser->homecity_id)));
+	
+		foreach ($data['regulators'] as $regBro) {
+			$regCo = Model_Regulator::find('first', array('where' => array('id' => $regBro->id)));
+			Debug::dump($userId, $currentUser->homecity_id, $data['regulators'], $regBro, $regCo);
 		}
+		
 		$data['regulators'] = Model_Regulator::find('all');
+		
 		$this->template->title = "Regulators";
 		$this->template->content = View::forge('regulators/index', $data);
-
 	}
 
 	public function action_view($id = null)

@@ -8,6 +8,92 @@ class Controller_ComplianceItems extends Controller_Template{
 		$this->template->content = View::forge('complianceitems/index', $data);
 
 	}
+	
+	public function action_userIndex($userId)
+	{
+		// Get the current user
+		$currentUser = Model_User::find('first', array('where' => array('id' => $userId)));
+		//
+		// Get all compliance items for BecauseUsa
+		$BecauseUsa = Model_ComplianceItem::find('all', array('where' => array('usa' => '1')));
+		// Get all compliance items for BecauseHomeSt
+		$BecauseHomeSt =  Model_ComplianceItem::find('all', array('where' => array('homeSt' => $currentUser->home_st)));
+		// Get all compliance items for BecauseHomeCity
+		$BecauseHomeCity =  Model_ComplianceItem::find('all', array('where' => array('homeCityId' => $currentUser->homecity_id)));
+		// Get all compliance items for BecauseWorkCity
+		$BecauseWorkCity =  Model_ComplianceItem::find('all', array('where' => array('workCityId' => $currentUser->workcity_id)));
+		//
+		// 
+		$BecauseOnlyHomeCity = array();
+		$BecauseHasCar = array();
+		$BecauseOnlyHasDLic = array();
+		$BecauseHasHome = array();
+		$BecauseHasBusiness = array();
+		
+		foreach ($BecauseHomeCity as $homeCityItem) {
+			if ($homeCityItem->cicar != '1' && $homeCityItem->cihome != '1' && $homeCityItem->cibusiness != '1' && $homeCityItem->cidriverslic != '1' && $homeCityItem->cibizlic != '1')
+			{
+				array_push($BecauseOnlyHomeCity, $homeCityItem);
+			}
+			if ($homeCityItem->cicar == '1') {
+				array_push($BecauseHasCar, $homeCityItem);
+			}
+			if ($homeCityItem->cidriverslic == '1' && $homeCityItem->cicar != '1') {
+				array_push($BecauseOnlyHasDLic, $homeCityItem);
+			}
+			if ($homeCityItem->cihome == '1') {
+				array_push($BecauseHasHome, $homeCityItem);
+			}
+			
+		}
+		foreach ($BecauseWorkCity as $workCityItem) {
+			if ($workCityItem->cibusiness == '1') {
+				array_push($BecauseHasBusiness, $workCityItem);
+			}
+			
+		}	
+		
+		$AllItemsThisUser = array();
+		foreach ($BecauseHomeCity as $item) {
+			array_push($AllItemsThisUser, $item);
+		}
+		foreach ($BecauseHomeSt as $item) {
+			array_push($AllItemsThisUser, $item);
+		}
+		foreach ($BecauseWorkCity as $item) {
+			array_push($AllItemsThisUser, $item);
+		}
+		foreach ($BecauseUsa as $item) {
+			array_push($AllItemsThisUser, $item);
+		}
+		
+		
+		Debug::dump($AllItemsThisUser, $BecauseOnlyHomeCity, $BecauseHasCar, $BecauseHasHome, $BecauseOnlyHasDLic, $BecauseHasBusiness);
+	
+		/*
+foreach ($data['regulators'] as $regBro) {
+			$regCo = Model_Regulator::find('first', array('where' => array('id' => $regBro->id)));
+			Debug::dump($userId, $currentUser->homecity_id, $data['regulators'], $regBro, $regCo);
+		}
+		
+		$data['regulators'] = Model_Regulator::find('all');
+		
+		$this->template->title = "Regulators";
+		$this->template->content = View::forge('regulators/index', $data);
+		
+		
+*/
+		
+		
+		
+		//$data['complianceItems'] = Model_ComplianceItem::find('all');
+		$data['complianceItems'] = $AllItemsThisUser;
+		$this->template->title = "ComplianceItems";
+		$this->template->content = View::forge('complianceitems/index', $data);
+
+	}
+	
+	
 
 	public function action_view($id = null)
 	{

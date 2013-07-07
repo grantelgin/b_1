@@ -6,6 +6,10 @@ class Model_ComplianceItem extends Model
 	protected static $_properties = array(
 		'id',
 		'regulator_id',
+		'homeCityId',
+		'homeSt',
+		'workCityId',
+		'usa',
 		'ciname',
 		'cidesc',
 		'cicar',
