@@ -15,3 +15,5 @@ ERROR - 2013-07-07 13:30:24 --> Notice - Undefined index: ciName in /Users/grant
 ERROR - 2013-07-07 13:30:49 --> Notice - Trying to get property of non-object in /Users/grantelgin/Sites/b1/fuel/app/classes/controller/complianceitems.php on line 54
 ERROR - 2013-07-07 13:30:59 --> Error - Property "ciName" not found for Model_ComplianceItem. in /Users/grantelgin/Sites/b1/fuel/packages/orm/classes/model.php on line 1093
 ERROR - 2013-07-07 13:31:29 --> Notice - Undefined index: all in /Users/grantelgin/Sites/b1/fuel/app/classes/controller/complianceitems.php on line 54
+ERROR - 2013-07-07 16:47:41 --> Parsing Error - syntax error, unexpected ':' in /Users/grantelgin/Sites/b1/fuel/app/classes/controller/complianceitems.php on line 71
+ERROR - 2013-07-07 21:49:51 --> Error - Property "ciDog" not found for Model_ComplianceItem. in /Users/grantelgin/Sites/b1/fuel/packages/orm/classes/model.php on line 1093

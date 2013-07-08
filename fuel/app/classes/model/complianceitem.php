@@ -17,6 +17,7 @@ class Model_ComplianceItem extends Model
 		'cibusiness',
 		'cidriverslic',
 		'cibizlic',
+		'cidog',
 		'cifreq',
 		'cifee',
 		'cipenaltyfee',
@@ -41,16 +42,16 @@ class Model_ComplianceItem extends Model
 		$val = Validation::forge($factory);
 		$val->add_field('regulator_id', 'Regulator Id', 'required|valid_string[numeric]');
 		$val->add_field('ciname', 'Ciname', 'required|max_length[255]');
-		$val->add_field('cidesc', 'Cidesc', 'required|max_length[255]');
-		$val->add_field('cicar', 'Cicar', 'required');
-		$val->add_field('cihome', 'Cihome', 'required');
-		$val->add_field('cibusiness', 'Cibusiness', 'required');
-		$val->add_field('cidriverslic', 'Cidriverslic', 'required');
-		$val->add_field('cibizlic', 'Cibizlic', 'required');
-		$val->add_field('cifreq', 'Cifreq', 'required|max_length[255]');
-		$val->add_field('cifee', 'Cifee', 'required|max_length[255]');
-		$val->add_field('cipenaltyfee', 'Cipenaltyfee', 'required|max_length[255]');
-		$val->add_field('cipenaltydesc', 'Cipenaltydesc', 'required|max_length[255]');
+		$val->add_field('cidesc', 'Cidesc', 'required|max_length[555]');
+		$val->add_field('cicar', 'Cicar', 'max_length[1]');
+		$val->add_field('cihome', 'Cihome', 'max_length[1]');
+		$val->add_field('cibusiness', 'Cibusiness', 'max_length[1]');
+		$val->add_field('cidriverslic', 'Cidriverslic', 'max_length[1]');
+		$val->add_field('cibizlic', 'Cibizlic', 'max_length[1]');
+		$val->add_field('cifreq', 'Cifreq', 'max_length[255]');
+		$val->add_field('cifee', 'Cifee', 'max_length[255]');
+		$val->add_field('cipenaltyfee', 'Cipenaltyfee', 'max_length[255]');
+		$val->add_field('cipenaltydesc', 'Cipenaltydesc', 'max_length[255]');
 
 		return $val;
 	}

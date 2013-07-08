@@ -68,22 +68,7 @@ class Controller_ComplianceItems extends Controller_Template{
 		}
 		
 		
-		Debug::dump($AllItemsThisUser, $BecauseOnlyHomeCity, $BecauseHasCar, $BecauseHasHome, $BecauseOnlyHasDLic, $BecauseHasBusiness);
-	
-		/*
-foreach ($data['regulators'] as $regBro) {
-			$regCo = Model_Regulator::find('first', array('where' => array('id' => $regBro->id)));
-			Debug::dump($userId, $currentUser->homecity_id, $data['regulators'], $regBro, $regCo);
-		}
-		
-		$data['regulators'] = Model_Regulator::find('all');
-		
-		$this->template->title = "Regulators";
-		$this->template->content = View::forge('regulators/index', $data);
-		
-		
-*/
-		
+		Debug::dump('$AllItemsThisUser', $AllItemsThisUser, '$BecauseOnlyHomeCity', $BecauseOnlyHomeCity, $BecauseHasCar, $BecauseHasHome, $BecauseOnlyHasDLic, $BecauseHasBusiness);
 		
 		
 		//$data['complianceItems'] = Model_ComplianceItem::find('all');

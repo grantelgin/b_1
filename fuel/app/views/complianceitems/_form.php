@@ -10,6 +10,39 @@
 			</div>
 		</div>
 		<div class="control-group">
+			<?php echo Form::label('homeCityId', 'homeCityId', array('class'=>'control-label')); ?>
+
+			<div class="controls">
+				<?php echo Form::input('homeCityId', Input::post('homeCityId', isset($complianceItem) ? $complianceItem->homeCityId : ''), array('class' => 'span4', 'placeholder'=>'homeCityId')); ?>
+
+			</div>
+		</div>
+		<div class="control-group">
+			<?php echo Form::label('homeSt', 'homeSt', array('class'=>'control-label')); ?>
+
+			<div class="controls">
+				<?php echo Form::input('homeSt', Input::post('homeSt', isset($complianceItem) ? $complianceItem->homeSt : ''), array('class' => 'span4', 'placeholder'=>'homeSt')); ?>
+
+			</div>
+		</div>
+		<div class="control-group">
+			<?php echo Form::label('workCityId', 'workCityId', array('class'=>'control-label')); ?>
+
+			<div class="controls">
+				<?php echo Form::input('workCityId', Input::post('workCityId', isset($complianceItem) ? $complianceItem->workCityId : ''), array('class' => 'span4', 'placeholder'=>'workCityId')); ?>
+
+			</div>
+		</div>
+				<div class="control-group">
+			<?php echo Form::label('usa', 'usa', array('class'=>'control-label')); ?>
+
+			<div class="controls">
+				<?php echo Form::input('usa', Input::post('usa', isset($complianceItem) ? $complianceItem->usa : ''), array('class' => 'span4', 'placeholder'=>'usa')); ?>
+
+			</div>
+		</div>
+
+		<div class="control-group">
 			<?php echo Form::label('Ciname', 'ciname', array('class'=>'control-label')); ?>
 
 			<div class="controls">
@@ -62,6 +95,14 @@
 
 			<div class="controls">
 				<?php echo Form::input('cibizlic', Input::post('cibizlic', isset($complianceItem) ? $complianceItem->cibizlic : ''), array('class' => 'span4', 'placeholder'=>'Cibizlic')); ?>
+
+			</div>
+		</div>
+				<div class="control-group">
+			<?php echo Form::label('cidog', 'cidog', array('class'=>'control-label')); ?>
+
+			<div class="controls">
+				<?php echo Form::input('cidog', Input::post('cidog', isset($complianceItem) ? $complianceItem->cidog : ''), array('class' => 'span4', 'placeholder'=>'Cidog')); ?>
 
 			</div>
 		</div>
