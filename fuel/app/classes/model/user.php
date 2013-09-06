@@ -5,7 +5,6 @@ class Model_User extends Orm\Model
 {
 	protected static $_properties = array(
 		'id',
-		'token',
 		'password',
 		'email',
 		'home_city',
@@ -51,7 +50,6 @@ protected static $_has_many = array('regulators');
 public static function validate($factory)
 	{
 		$val = Validation::forge($factory);
-		$val->add_field('token', 'Token', 'max_length[255]');
 		$val->add_field('password', 'Password', 'required|min_length[4]|max_length[255]');
 		$val->add_field('email', 'Email', 'required|valid_email|max_length[255]');
 		$val->add_field('home_city', 'Home City', 'required|max_length[255]');
@@ -77,7 +75,6 @@ public static function validate($factory)
 	public static function validateAccount($factory)
 	{
 		$val = Validation::forge($factory);
-		$val->add_field('token', 'Token', 'max_length[255]');
 		$val->add_field('password', 'Password', 'required|max_length[255]');
 		$val->add_field('email', 'Email', 'required|valid_email|max_length[255]');
 		$val->add_field('first_name', 'First Name', 'required|max_length[255]');

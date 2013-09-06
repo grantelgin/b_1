@@ -2,14 +2,6 @@
 
 	<fieldset>
 		<div class="control-group">
-			<?php echo Form::label('Token', 'token', array('class'=>'control-label')); ?>
-
-			<div class="controls">
-				<?php echo Form::input('token', Input::post('token', isset($user) ? $user->token : ''), array('class' => 'span4', 'placeholder'=>'Token')); ?>
-
-			</div>
-		</div>
-		<div class="control-group">
 			<?php echo Form::label('Password', 'password', array('class'=>'control-label')); ?>
 
 			<div class="controls">

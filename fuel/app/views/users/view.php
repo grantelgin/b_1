@@ -1,8 +1,6 @@
 <h2>Viewing <span class='muted'>#<?php echo $user->id; ?></span></h2>
 
-<p>
-	<strong>Token:</strong>
-	<?php echo $user->token; ?></p>
+
 <p>
 	<strong>Password:</strong>
 	<?php echo $user->password; ?></p>

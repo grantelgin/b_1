@@ -4,7 +4,6 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>Token</th>
 			<th>Password</th>
 			<th>Email</th>
 			<th>Home city</th>
@@ -29,7 +28,6 @@
 	<tbody>
 <?php foreach ($users as $user): ?>		<tr>
 
-			<td><?php echo $user->token; ?></td>
 			<td><?php echo $user->password; ?></td>
 			<td><?php echo $user->email; ?></td>
 			<td><?php echo $user->home_city; ?></td>

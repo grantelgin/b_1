@@ -33,7 +33,6 @@ class Controller_Users extends Controller_Template{
 			if ($val->run())
 			{
 				$user = Model_User::forge(array(
-					'token' => Input::post('token'),
 					'password' => Input::post('password'),
 					'email' => Input::post('email'),
 					'first_name' => Input::post('first_name'),
@@ -306,7 +305,6 @@ class Controller_Users extends Controller_Template{
 
 		if ($val->run())
 		{
-			$user->token = Input::post('token');
 			$user->password = Input::post('password');
 			$user->email = Input::post('email');
 			$user->home_city = Input::post('home_city');
@@ -343,7 +341,6 @@ class Controller_Users extends Controller_Template{
 		{
 			if (Input::method() == 'POST')
 			{
-				$user->token = $val->validated('token');
 				$user->password = $val->validated('password');
 				$user->email = $val->validated('email');
 				$user->home_city = $val->validated('home_city');
