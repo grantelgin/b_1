@@ -1,6 +1,32 @@
 <div class="whiteContainer">
 <h2>Viewing <span class='muted'>#<?php echo $regulator->id; ?></span></h2>
 
+<h3 style="border-bottom:1px solid #b0b0b0;"><?php echo $regulator->regname; ?></h3>
+<h4><?php echo $regulator->regweb; ?>  <?php echo $regulator->regphone; ?></h4>
+<div class="row">
+	<div class="span4">
+		<?php echo $regulator->regadddesc; ?><br/>
+		<?php echo $regulator->regstreet1; ?><br/>
+		<?php echo $regulator->regstreet2; ?><br/>
+		<?php echo $regulator->regcityid; ?>
+	</div>
+	<div class="span4">
+		<?php echo $regulator->regadddesc2; ?><br/>
+		<?php echo $regulator->regaddstreet12; ?><br/>
+		<?php echo $regulator->regaddstreet22; ?><br/>
+		<?php echo $regulator->regcity2; ?>
+	</div>
+	<div class="span4">
+		<?php echo $regulator->regadddesc3; ?><br/>
+		<?php echo $regulator->regaddstreet13; ?><br/>
+		<?php echo $regulator->regaddstreet23; ?><br/>
+		<?php echo $regulator->regcity3; ?>
+	</div>
+</div>
+
+
+
+<!--
 <p>
 	<strong>Regname:</strong>
 	<?php echo $regulator->regname; ?></p>
@@ -49,6 +75,9 @@
 <p>
 	<strong>Reglogo:</strong>
 	<?php echo $regulator->reglogo; ?></p>
+-->
+
+
 
 <?php echo Html::anchor('regulators/edit/'.$regulator->id, 'Edit'); ?> |
 <?php echo Html::anchor('regulators', 'Back'); ?>
