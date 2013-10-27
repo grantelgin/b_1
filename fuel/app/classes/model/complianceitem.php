@@ -22,6 +22,7 @@ class Model_ComplianceItem extends Model
 		'cifee',
 		'cipenaltyfee',
 		'cipenaltydesc',
+		'regulatorName',
 		'created_at',
 		'updated_at',
 	);
@@ -52,6 +53,7 @@ class Model_ComplianceItem extends Model
 		$val->add_field('cifee', 'Cifee', 'max_length[255]');
 		$val->add_field('cipenaltyfee', 'Cipenaltyfee', 'max_length[255]');
 		$val->add_field('cipenaltydesc', 'Cipenaltydesc', 'max_length[255]');
+		$val->add_field('regulatorName', 'Regulator Name', 'max_length[255]');
 
 		return $val;
 	}

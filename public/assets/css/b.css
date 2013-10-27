@@ -1,0 +1,10 @@
+.blueGradient {
+	background-color: #71c2f8;
+	background-image: radial-gradient(50% 50%, rgb(113, 194, 248), rgb(48, 143, 206));
+}
+
+.whiteContainer {
+	background-color: #fff;
+	border-radius: 5px;
+	padding:5px;
+}

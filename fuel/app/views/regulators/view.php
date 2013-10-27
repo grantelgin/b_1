@@ -1,3 +1,4 @@
+<div class="whiteContainer">
 <h2>Viewing <span class='muted'>#<?php echo $regulator->id; ?></span></h2>
 
 <p>
@@ -51,3 +52,4 @@
 
 <?php echo Html::anchor('regulators/edit/'.$regulator->id, 'Edit'); ?> |
 <?php echo Html::anchor('regulators', 'Back'); ?>
+</div>

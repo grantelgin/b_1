@@ -2,14 +2,6 @@
 
 	<fieldset>
 		<div class="control-group">
-			<?php echo Form::label('Password', 'password', array('class'=>'control-label')); ?>
-
-			<div class="controls">
-				<?php echo Form::input('password', Input::post('password', isset($user) ? $user->password : ''), array('class' => 'span4', 'placeholder'=>'Password')); ?>
-
-			</div>
-		</div>
-		<div class="control-group">
 			<?php echo Form::label('Email', 'email', array('class'=>'control-label')); ?>
 
 			<div class="controls">
@@ -17,7 +9,16 @@
 
 			</div>
 		</div>
-<div class="control-group">
+		<div class="control-group">
+			<?php echo Form::label('Password', 'password', array('class'=>'control-label')); ?>
+
+			<div class="controls">
+				<?php echo Form::input('password', Input::post('password', isset($user) ? $user->password : ''), array('class' => 'span4', 'placeholder'=>'Password')); ?>
+
+			</div>
+		</div>
+		
+		<div class="control-group">
 			<?php echo Form::label('First name', 'first_name', array('class'=>'control-label')); ?>
 
 			<div class="controls">

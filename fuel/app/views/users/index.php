@@ -1,3 +1,4 @@
+<div class="whiteContainer">
 <h2>Listing <span class='muted'>Users</span></h2>
 <br>
 <?php if ($users): ?>
@@ -63,3 +64,4 @@
 	<?php echo Html::anchor('users/createAccount', 'Add new User', array('class' => 'btn btn-success')); ?>
 
 </p>
+</div>

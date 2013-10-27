@@ -1,3 +1,4 @@
+<div class="whiteContainer">
 <h2>Listing <span class='muted'>Regulators</span></h2>
 <br>
 <?php if ($regulators): ?>
@@ -59,3 +60,4 @@
 	<?php echo Html::anchor('regulators/create', 'Add new Regulator', array('class' => 'btn btn-success')); ?>
 
 </p>
+</div>

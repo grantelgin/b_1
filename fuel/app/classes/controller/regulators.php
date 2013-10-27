@@ -21,7 +21,9 @@ class Controller_Regulators extends Controller_Template{
 		}
 		
 		$data['regulators'] = Model_Regulator::find('all');
-		
+		//$data['regulators'] = Model_Regulator::find('all', array('where' => array('city_id' => $currentUser->homecity_id)));
+
+		Debug::dump($userId, $currentUser->homecity_id, $data['regulators']);
 		$this->template->title = "Regulators";
 		$this->template->content = View::forge('regulators/index', $data);
 	}

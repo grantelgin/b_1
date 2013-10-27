@@ -1,3 +1,4 @@
+<div class="whiteContainer">
 <h2>Viewing <span class='muted'>#<?php echo $complianceItem->id; ?></span></h2>
 
 <p>
@@ -39,3 +40,4 @@
 
 <?php echo Html::anchor('complianceitems/edit/'.$complianceItem->id, 'Edit'); ?> |
 <?php echo Html::anchor('complianceitems', 'Back'); ?>
+</div>

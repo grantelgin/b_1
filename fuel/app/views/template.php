@@ -4,11 +4,15 @@
 	<meta charset="utf-8">
 	<title><?php echo $title; ?></title>
 	<?php echo Asset::css('bootstrap.css'); ?>
+	<?php echo Asset::css('b.css'); ?>
+	
 	<style>
 		body { margin: 40px; }
 	</style>
 </head>
-<body>
+<body class="blueGradient">
+<h1>Bureaucracy</h1>
+<h2>Keeping track shouldn't be difficult</h2>
 	<div class="container">
 		<div class="span12">
 			<h1><?php echo $title; ?></h1>
@@ -35,10 +39,10 @@
 		</div>
 		<footer>
 			<p class="pull-right">Page rendered in {exec_time}s using {mem_usage}mb of memory.</p>
-			<p>
-				<a href="http://fuelphp.com">FuelPHP</a> is released under the MIT license.<br>
-				<small>Version: <?php echo e(Fuel::VERSION); ?></small>
-			</p>
+			<!-- <p>																			   -->
+			<!--   <a href="http://fuelphp.com">FuelPHP</a> is released under the MIT license.<br> -->
+			<!--   <small>Version: <?php echo e(Fuel::VERSION); ?></small>						   -->
+			<!-- </p>																			   -->
 		</footer>
 	</div>
 </body>

@@ -68,7 +68,7 @@ class Controller_ComplianceItems extends Controller_Template{
 		}
 		
 		
-		Debug::dump('$AllItemsThisUser', $AllItemsThisUser, '$BecauseOnlyHomeCity', $BecauseOnlyHomeCity, $BecauseHasCar, $BecauseHasHome, $BecauseOnlyHasDLic, $BecauseHasBusiness);
+		//Debug::dump('$AllItemsThisUser', $AllItemsThisUser, '$BecauseOnlyHomeCity', $BecauseOnlyHomeCity, $BecauseHasCar, $BecauseHasHome, $BecauseOnlyHasDLic, $BecauseHasBusiness);
 		
 		
 		//$data['complianceItems'] = Model_ComplianceItem::find('all');

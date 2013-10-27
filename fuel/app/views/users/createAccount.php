@@ -1,3 +1,4 @@
+<div class="whiteContainer">
 <h2>New <span class='muted'>User</span></h2>
 <br>
 
@@ -5,3 +6,5 @@
 
 
 <p><?php echo Html::anchor('users', 'Back'); ?></p>
+
+</div>

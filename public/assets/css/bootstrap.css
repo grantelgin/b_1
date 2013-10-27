@@ -7,7 +7,7 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-
+ 
 article,
 aside,
 details,
@@ -193,7 +193,8 @@ a:hover {
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  max-width: 1024px;
+  overflow: scroll;
 }
 
 .span12 {
@@ -3738,7 +3739,8 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  max-width: 1024px;
+  overflow: scroll;
 }
 
 .navbar-fixed-top {

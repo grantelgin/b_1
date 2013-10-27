@@ -206,8 +206,10 @@ class Controller_Users extends Controller_Template{
 			if ($user->save())
 			{
 				Session::set_flash('success', 'Updated user #' . $id);
-
-				Response::redirect('users/editGarage/'.$id);
+				if ($user->hasautomobile == 1)
+					Response::redirect('users/editGarage/'.$id);
+				else 
+					Response::redirect('complianceitems/userIndex/'.$id);
 			}
 
 			else
@@ -261,7 +263,7 @@ class Controller_Users extends Controller_Template{
 			{
 				Session::set_flash('success', 'Updated user #' . $id);
 
-				Response::redirect('users');
+				Response::redirect('complianceitems/userIndex/'.$id);
 			}
 
 			else
