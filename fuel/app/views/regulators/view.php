@@ -2,29 +2,50 @@
 <h2>Viewing <span class='muted'>#<?php echo $regulator->id; ?></span></h2>
 
 <h3 style="border-bottom:1px solid #b0b0b0;"><?php echo $regulator->regname; ?></h3>
-<h4><?php echo $regulator->regweb; ?>  <?php echo $regulator->regphone; ?></h4>
 <div class="row">
+	<div class="span2">
+		<img src="../../../../assets/img/<?php echo $regulator->reglogo ?>.jpeg" class="img-rounded" style="width:140px;" />
+	</div>
 	<div class="span4">
+		<?php echo $regulator->regweb; ?><br/>
+		<?php echo $regulator->regphone; ?>
+	</div>
+</div>
+<div class="row-fluid">
+	
+	<div class="span4">
+	<address class="well">
 		<?php echo $regulator->regadddesc; ?><br/>
 		<?php echo $regulator->regstreet1; ?><br/>
 		<?php echo $regulator->regstreet2; ?><br/>
 		<?php echo $regulator->regcityid; ?>
-	</div>
-	<div class="span4">
+	</address>
+	<address class="well">
 		<?php echo $regulator->regadddesc2; ?><br/>
 		<?php echo $regulator->regaddstreet12; ?><br/>
 		<?php echo $regulator->regaddstreet22; ?><br/>
 		<?php echo $regulator->regcity2; ?>
-	</div>
-	<div class="span4">
+
+	</address>
+	<address class="well">
 		<?php echo $regulator->regadddesc3; ?><br/>
 		<?php echo $regulator->regaddstreet13; ?><br/>
 		<?php echo $regulator->regaddstreet23; ?><br/>
 		<?php echo $regulator->regcity3; ?>
+	</address>
 	</div>
+	<div class="span8">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#">If you are NOT sending a payment</a></li>
+		<li><a href="#">If you ARE sending a payment</a></li>
+	</ul>
+	next compliance item here<br/><br/>
+	
+	list of all compliance items below that
+	<div
+	</div>
+	
 </div>
-
-
 
 <!--
 <p>

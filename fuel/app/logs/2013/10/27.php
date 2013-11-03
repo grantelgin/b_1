@@ -7,3 +7,4 @@ ERROR - 2013-10-27 16:58:51 --> Parsing Error - syntax error, unexpected '.' in 
 ERROR - 2013-10-27 17:04:13 --> Notice - Trying to get property of non-object in /Users/grantelgin/Sites/b1/fuel/app/classes/controller/complianceitems.php on line 20
 ERROR - 2013-10-27 17:04:22 --> Notice - Trying to get property of non-object in /Users/grantelgin/Sites/b1/fuel/app/classes/controller/complianceitems.php on line 20
 ERROR - 2013-10-27 17:04:43 --> Notice - Trying to get property of non-object in /Users/grantelgin/Sites/b1/fuel/app/classes/controller/complianceitems.php on line 20
+ERROR - 2013-10-27 21:28:34 --> Parsing Error - syntax error, unexpected 'class' (T_CLASS), expecting ',' or ';' in /Users/grantelgin/Sites/b1/fuel/app/views/regulators/view.php on line 6

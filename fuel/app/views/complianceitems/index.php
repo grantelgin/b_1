@@ -26,7 +26,7 @@
 				<?php echo $complianceItem->cifreq; ?>
 			</td>
 			<td>
-				<?php echo Html::anchor('complianceitems/view/'.$complianceItem->id, '<i class="icon-time icon-white" title="Set reminder"></i> Set reminder', array('class' => 'btn btn-primary')); ?>
+				<?php echo Html::anchor('complianceitems/view/'.$complianceItem->id, '<i class="glyphicon glyphicon-time glyphicon-white" title="Set reminder"></i> Set reminder', array('class' => 'btn btn-primary')); ?>
 			</td>
 			<!--	<?php if ($complianceItem->cicar == 1) echo("Because you own a car<br/>"); ?>
 				<?php if ($complianceItem->cihome == 1) echo("Because you own a home<br/>"); ?>
